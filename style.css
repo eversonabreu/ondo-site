@@ -31,7 +31,7 @@ body {
     width: var(--sidebar-width);
     background: #fff;
     border-right: 1px solid #eaeaea;
-    padding: 30px 20px;
+    padding: 30px 20px 40px 20px; /* Aumentado o padding inferior para o texto respirar */
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -40,6 +40,16 @@ body {
     top: 0;
     z-index: 1000;
     transition: transform 0.3s ease;
+    overflow-y: auto; /* PERMITE ROLAGEM NO MENU QUANDO A TELA FOR PEQUENA */
+}
+
+/* Oculta a barra de rolagem visualmente, mas mantém a funcionalidade */
+#sidebar-left-container::-webkit-scrollbar {
+    width: 4px;
+}
+#sidebar-left-container::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 4px;
 }
 
 .content-area {
@@ -59,6 +69,7 @@ body {
     height: 100vh;
     right: 0;
     top: 0;
+    overflow-y: auto;
 }
 
 /* =========================================
@@ -119,7 +130,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* Estilo das caixinhas de texto */
 .module-card {
     background: #fff;
     border: 1px solid #eaeaea;
@@ -165,19 +175,12 @@ a.module-card:hover {
 
 .video-section video {
     width: 100%;
-    max-width: 950px; /* Aumentamos o limite para o vídeo ficar mais largo e, consequentemente, mais alto */
-    aspect-ratio: 16 / 9; /* Força a proporção clássica de telas grandes */
-    object-fit: contain; /* Garante que o vídeo não seja cortado */
+    max-width: 950px; 
+    aspect-ratio: 16 / 9; 
+    object-fit: contain; 
     border-radius: 12px;
     background: #111;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* Comportamento responsivo (Mobile) */
-@media (max-width: 1024px) {
-    .modules-grid {
-        grid-template-columns: 1fr; /* Coloca uma caixinha embaixo da outra */
-    }
 }
 
 /* =========================================
@@ -230,6 +233,7 @@ a.module-card:hover {
 @media (max-width: 1024px) {
     body {
         flex-direction: column;
+        padding-bottom: 80px; /* Garante que o site role além da barra de anúncio fixa */
     }
 
     #sidebar-left-container {
@@ -247,13 +251,24 @@ a.module-card:hover {
         padding: 20px;
     }
 
+    /* BARRA DE ANÚNCIO FIXA NA BASE (MOBILE) */
     #sidebar-right-container {
-        position: relative;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
         width: 100%;
-        height: auto;
+        height: 80px; /* Altura fixa para o banner de anúncio */
         border-left: none;
         border-top: 1px solid #eaeaea;
-        padding: 20px;
+        padding: 10px;
+        z-index: 998;
+        background: #fff;
+        box-shadow: 0 -4px 10px rgba(0,0,0,0.08);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Evita que anúncios grandes quebrem o layout */
     }
 
     .mobile-menu-btn {
@@ -262,6 +277,5 @@ a.module-card:hover {
 
     .modules-grid {
         grid-template-columns: 1fr;
-        grid-auto-rows: auto; /* Altura automática no mobile para não esticar demais */
     }
 }
