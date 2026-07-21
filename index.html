@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ondo - Aprenda Inglês e Espanhol</title>
-    <!-- Aqui está a linha que puxa o estilo: -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,40 +11,46 @@
     <!-- Container do Menu Esquerdo -->
     <aside id="sidebar-left-container"></aside>
 
-<!-- INÍCIO DO GRID DE MÓDULOS E VÍDEO -->
+    <!-- Área Central de Conteúdo -->
+    <main class="content-area">
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰ Menu</button>
+        
+        <header style="text-align: center; margin-bottom: 30px;">
+            <img src="images/ondo-mascot-body.png" alt="Ondo Dolphin" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <h1>Muito prazer, nós somos o Ondo! 🐬</h1>
+            <p style="font-size: 1.1rem; color: #666; margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto; margin-bottom: 20px;">
+                Seu novo parceiro inteligente para o aprendizado definitivo de inglês e espanhol.
+            </p>
+        </header>
+        
+        <!-- INÍCIO DO GRID DE MÓDULOS E VÍDEO -->
         <div class="modules-grid">
             
-            <!-- Caixinha 1 -->
             <a href="fala.html" class="module-card">
                 <h3>🗣️ Fala e Improvisação</h3>
                 <p>A improvisação é fundamental em uma fala natural. Nossos sistemas exigem produção ativa.</p>
             </a>
 
-            <!-- Caixinha 2 -->
             <a href="memorizacao.html" class="module-card">
                 <h3>🧠 Memorização</h3>
                 <p>Construa um vocabulário de ferro. Memorize milhares de frases de forma inteligente.</p>
             </a>
 
-            <!-- Caixinha 3 -->
             <a href="exercicios.html" class="module-card">
                 <h3>✍️ Exercícios Ativos</h3>
                 <p>Fuja da simples múltipla escolha. Nossos exercícios exigem que você construa respostas reais.</p>
             </a>
 
-            <!-- Caixinha 4 -->
             <a href="pratica.html" class="module-card">
                 <h3>🎯 Prática Guiada</h3>
                 <p>Receba avaliações inteligentes pela coerência e profundidade das suas respostas.</p>
             </a>
 
-            <!-- Caixinha 5 -->
             <a href="historia.html" class="module-card">
                 <h3>📚 Módulo de História</h3>
                 <p>Contexto é tudo. Aprenda através de narrativas imersivas e vocabulário profissional.</p>
             </a>
 
-            <!-- Caixinha 6 (Vídeo Integrado) -->
             <div class="video-card">
                 <h3 style="margin-bottom: 10px; font-size: 1rem; color: #555; text-align: center;">
                     Conheça um pouco do aplicativo...
@@ -58,17 +63,17 @@
 
         </div>
         <!-- FIM DO GRID DE MÓDULOS E VÍDEO -->
-		
+
         <!-- Seção de Download -->
         <div class="download-section">
             <h2>Pronto para destravar sua fluência?</h2>
             <p style="margin-bottom: 20px; color: #555;">Baixe o Ondo agora mesmo. É 100% gratuito.</p>
             <div class="store-buttons">
                 <a href="#" id="btn-playstore" target="_blank" rel="noopener noreferrer">
-                    <img src="images/play-store.png" alt="Disponível no Google Play">
+                    <img src="images/play-store.png" alt="Disponível no Google Play" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span style=\'display:inline-block; padding:10px 20px; background:#000; color:#fff; border-radius:5px; margin: 0 5px;\'>Google Play</span>');">
                 </a>
                 <a href="#" id="btn-appstore" target="_blank" rel="noopener noreferrer">
-                    <img src="images/app-store.png" alt="Baixar na App Store">
+                    <img src="images/app-store.png" alt="Baixar na App Store" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span style=\'display:inline-block; padding:10px 20px; background:#000; color:#fff; border-radius:5px; margin: 0 5px;\'>App Store</span>');">
                 </a>
             </div>
         </div>
