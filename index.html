@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ondo - Aprenda Inglês e Espanhol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container do Menu Esquerdo (Injetado via JS) -->
+    <aside id="sidebar-left-container"></aside>
+
+    <!-- Área Central de Conteúdo -->
+    <main class="content-area">
+        <!-- Botão visível apenas no Mobile -->
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰ Menu</button>
+        
+        <header style="text-align: center; margin-bottom: 40px;">
+            <img src="images/ondo-mascot-body.png" alt="Ondo Dolphin" style="width: 150px; margin-bottom: 20px;">
+            <h1>Muito prazer, nós somos o Ondo! 🐬</h1>
+        </header>
+        
+        <section style="line-height: 1.6; font-size: 1.1rem;">
+            <p>Bem-vindo à página oficial do seu novo parceiro de aprendizado de idiomas. O aplicativo foi criado para tornar o estudo de inglês e espanhol muito mais prático e inteligente.</p>
+            <br>
+            <p>Navegue pelo menu lateral para conhecer nossos módulos de história, entender como funciona a nossa prática guiada e descobrir como o nosso sistema avalia a profundidade e a coerência das suas respostas para garantir um aprendizado real.</p>
+        </section>
+    </main>
+
+    <!-- Container de Anúncios (Injetado via JS) -->
+    <aside id="sidebar-right-container"></aside>
+
+    <!-- Scripts da Aplicação -->
+    <!-- Script Oficial do Google AdSense (Carregamento Assíncrono para não travar a página) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    <!-- Nosso Motor de Injeção -->
+    <script src="app.js"></script>
+
+</body>
+</html>
