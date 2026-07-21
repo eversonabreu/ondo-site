@@ -165,7 +165,9 @@ a.module-card:hover {
 
 .video-section video {
     width: 100%;
-    max-width: 700px; /* Limita a largura para não ficar gigante no PC */
+    max-width: 950px; /* Aumentamos o limite para o vídeo ficar mais largo e, consequentemente, mais alto */
+    aspect-ratio: 16 / 9; /* Força a proporção clássica de telas grandes */
+    object-fit: contain; /* Garante que o vídeo não seja cortado */
     border-radius: 12px;
     background: #111;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
