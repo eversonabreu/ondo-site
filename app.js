@@ -1,9 +1,14 @@
 // Configurações Globais Públicas
 const APP_CONFIG = {
     adsense: {
-        enabled: true, // Mude para false quando quiser testar localmente sem erros no console
+        enabled: true, 
         clientId: 'ca-pub-XXXXXXXXXXXXXXXX', 
         adSlotId: 'XXXXXXXXXX'
+    },
+    // Links fictícios das lojas (Altere aqui quando publicar)
+    storeUrls: {
+        googlePlay: 'https://play.google.com/store/apps/details?id=br.com.evertech.ondo',
+        appStore: 'https://apps.apple.com/br/app/ondo/id000000000'
     }
 };
 
@@ -31,6 +36,12 @@ function toggleMenu() {
 // Inicialização da Aplicação
 document.addEventListener('DOMContentLoaded', async () => {
     
+	const playStoreBtn = document.getElementById('btn-playstore');
+    const appStoreBtn = document.getElementById('btn-appstore');
+    
+    if (playStoreBtn) playStoreBtn.href = APP_CONFIG.storeUrls.googlePlay;
+    if (appStoreBtn) appStoreBtn.href = APP_CONFIG.storeUrls.appStore;
+	
     // Carrega os menus paralelamente para maior performance
     await Promise.all([
         loadComponent('sidebar-left-container', 'sidebar-left.html'),

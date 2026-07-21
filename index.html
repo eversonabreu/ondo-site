@@ -1,42 +1,62 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ondo - Aprenda Inglês e Espanhol</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Container do Menu Esquerdo (Injetado via JS) -->
-    <aside id="sidebar-left-container"></aside>
-
-    <!-- Área Central de Conteúdo -->
+<!-- Área Central de Conteúdo -->
     <main class="content-area">
-        <!-- Botão visível apenas no Mobile -->
         <button class="mobile-menu-btn" onclick="toggleMenu()">☰ Menu</button>
         
-        <header style="text-align: center; margin-bottom: 40px;">
-            <img src="images/ondo-mascot-body.png" alt="Ondo Dolphin" style="width: 150px; margin-bottom: 20px;">
+        <header style="text-align: center; margin-bottom: 30px;">
+            <img src="images/ondo-mascot-body.png" alt="Ondo Dolphin" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
             <h1>Muito prazer, nós somos o Ondo! 🐬</h1>
+            <p style="font-size: 1.1rem; color: #666; margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Seu novo parceiro inteligente para o aprendizado definitivo de inglês e espanhol.
+            </p>
         </header>
         
-        <section style="line-height: 1.6; font-size: 1.1rem;">
-            <p>Bem-vindo à página oficial do seu novo parceiro de aprendizado de idiomas. O aplicativo foi criado para tornar o estudo de inglês e espanhol muito mais prático e inteligente.</p>
-            <br>
-            <p>Navegue pelo menu lateral para conhecer nossos módulos de história, entender como funciona a nossa prática guiada e descobrir como o nosso sistema avalia a profundidade e a coerência das suas respostas para garantir um aprendizado real.</p>
+        <section style="line-height: 1.6; font-size: 1.1rem; text-align: center; margin-bottom: 40px;">
+            <p>O aplicativo foi criado para romper com os métodos tradicionais, focando na produção ativa, profundidade e no uso real do idioma no seu dia a dia.</p>
         </section>
+
+        <!-- Grid de Módulos -->
+        <h2 style="font-size: 1.5rem; border-bottom: 2px solid #eaeaea; padding-bottom: 10px;">Como você vai aprender:</h2>
+        
+        <div class="modules-grid">
+            <div class="module-card">
+                <h3>🗣️ Fala e Improvisação</h3>
+                <p>A improvisação é fundamental em uma fala natural. Nossos sistemas exigem produção ativa, preparando você para formular respostas e conversar sem travar no mundo real.</p>
+            </div>
+
+            <div class="module-card">
+                <h3>🧠 Memorização</h3>
+                <p>Construa um vocabulário de ferro. Memorize milhares de frases e estruturas semânticas essenciais de forma inteligente, garantindo que você nunca mais esqueça o que estudou.</p>
+            </div>
+
+            <div class="module-card">
+                <h3>✍️ Exercícios Ativos</h3>
+                <p>Fuja da simples múltipla escolha. Nossos modelos de exercícios exigem que o usuário pense, construa e aplique regras gramaticais em contextos variados e desafiadores.</p>
+            </div>
+
+            <div class="module-card">
+                <h3>🎯 Prática Guiada</h3>
+                <p>Receba avaliações inteligentes não apenas pela gramática, mas pela coerência e profundidade das suas respostas. O esforço intelectual é diretamente recompensado.</p>
+            </div>
+
+            <div class="module-card">
+                <h3>📚 Módulo de História</h3>
+                <p>Contexto é tudo. Aprenda através de narrativas envolventes e textos com vocabulário profissional, universal e livre de distrações.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Download -->
+        <div class="download-section">
+            <h2>Pronto para destravar sua fluência?</h2>
+            <p style="margin-bottom: 20px; color: #555;">Baixe o Ondo agora mesmo. É 100% gratuito.</p>
+            <div class="store-buttons">
+                <!-- Os links (href) serão injetados magicamente pelo app.js -->
+                <a href="#" id="btn-playstore" target="_blank" rel="noopener noreferrer">
+                    <img src="images/play-store.png" alt="Disponível no Google Play">
+                </a>
+                <a href="#" id="btn-appstore" target="_blank" rel="noopener noreferrer">
+                    <img src="images/app-store.png" alt="Baixar na App Store">
+                </a>
+            </div>
+        </div>
+
     </main>
-
-    <!-- Container de Anúncios (Injetado via JS) -->
-    <aside id="sidebar-right-container"></aside>
-
-    <!-- Scripts da Aplicação -->
-    <!-- Script Oficial do Google AdSense (Carregamento Assíncrono para não travar a página) -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
-    <!-- Nosso Motor de Injeção -->
-    <script src="app.js"></script>
-
-</body>
-</html>
