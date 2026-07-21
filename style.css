@@ -284,4 +284,7 @@ main.content-area {
         grid-template-columns: 1fr; /* No celular, as caixinhas ficam uma embaixo da outra */
         width: 100%;
     }
+	.hide-on-mobile {
+        display: none !important;
+    }
 }
