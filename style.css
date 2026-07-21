@@ -258,16 +258,17 @@ main.content-area {
 }
 
 /* =========================================
-   GRID DE MÓDULOS E VÍDEO
+   GRID DE MÓDULOS E VÍDEO (ALTURAS IGUAIS)
    ========================================= */
 .modules-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr; /* O SEGREDO AQUI: Força TODAS as 6 caixas a terem a mesma altura */
     gap: 15px;
     margin-bottom: 40px;
 }
 
-/* Estilo padrão das caixinhas de texto */
+/* Estilo das caixinhas de texto */
 .module-card {
     background: #fff;
     border: 1px solid #eaeaea;
@@ -280,6 +281,8 @@ main.content-area {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centraliza o texto verticalmente */
+    height: 100%; /* Garante que a caixa estique até o limite da linha */
+    box-sizing: border-box;
 }
 
 .module-card:hover {
@@ -310,19 +313,23 @@ main.content-area {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%; /* Garante que tenha a mesma altura das outras */
+    box-sizing: border-box;
 }
 
 .video-card video {
     width: 100%;
-    max-height: 150px; /* Impede que o vídeo estique demais a altura da linha */
+    height: 100%;
+    object-fit: contain; /* O 'contain' garante que o vídeo não seja cortado nem esticado */
     border-radius: 6px;
-    background: #000;
+    background: #111;
 }
 
 /* Comportamento responsivo (Mobile) */
 @media (max-width: 1024px) {
     .modules-grid {
         grid-template-columns: 1fr; /* Coloca uma caixinha embaixo da outra */
+        grid-auto-rows: auto; /* No mobile, deixamos a altura livre para não ficar estranho */
         width: 100%;
     }
 }
