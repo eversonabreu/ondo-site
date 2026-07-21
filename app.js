@@ -46,3 +46,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 });
+
+// Fecha o menu lateral no mobile ao clicar fora dele
+document.addEventListener('click', (event) => {
+    const sidebar = document.getElementById('sidebar-left-container');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    // Verifica se a sidebar existe e se está aberta (tem a classe 'active')
+    if (sidebar && sidebar.classList.contains('active')) {
+        // Se o clique NÃO foi dentro da sidebar E NÃO foi no botão de abrir
+        if (!sidebar.contains(event.target) && event.target !== menuBtn) {
+            sidebar.classList.remove('active');
+        }
+    }
+});
